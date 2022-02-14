@@ -2,7 +2,7 @@
 
 ## Project Links
 
-- [add your github repo link]()
+- [https://git.generalassemb.ly/rlopez4042/project-2-react]()
 - [add your deployment link]()
 
 ## Project Description
@@ -36,11 +36,11 @@ https://services.surfline.com/kbyg/spots/reports?spotId={specific spot ID}
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [add link to your wireframes]()
+- https://wireframepro.mockflow.com/editor.jsp?editor=off&perm=Owner&projectid=M0BbJoF0pnb&publicid=13d9276bcbf34d8d856235bf81df8ade#/page/D9e0950a16ff51d85c20a9b814ebf04e3
 - [add link to your react architecture]()
 
 
-### MVP/PostMVP - 5minutes
+### MVP/PostMVP - 5min
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
