@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // import axios from "axios";
@@ -7,14 +8,13 @@ import spotIDs from "../spotID-data";
 function Home(props) {
   //A variable for the spot ID, each beach has a unique spot ID
   //const { spot } = useParams();
-  //Base URL, loaded with IB data to isolate bugs
-  //const beachFinder = `https://services.surfline.com/kbyg/spots/reports?spotId=5842041f4e65fad6a7708847`;
   //Base URL
   const beachFinder = `https://services.surfline.com/kbyg/spots/reports?spotId=`;
-  const [beachData, setBeachData] = useState(null);
-  
+  const [beachList, setBeachList] = useState([]);
+  const [beachData, setBeachData] = useState("");
+
   //Set initialBeach to null to avoid loading a URL without a spot ID on initial launch
-  let initialBeach = null;
+  let displayData = null;
   //Gather data from the URL
   const findBeach = async () => {
     var arrayLength = spotIDs.length;
@@ -23,19 +23,42 @@ function Home(props) {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
+          setBeachList(data);
           setBeachData(data);
-        //initialBeach = data.spot.name;
         });
     }
   };
   useEffect(() => {
     findBeach();
-  }, [beachFinder]);
+  }, []);
+
+    const displayBeachList = beachList.map((beach, index) => {
+      return <p key ={index}>{beach.spot.name}</p>;
+    });
+
+    console.log(displayBeachList)
 
   if (beachData) {
-    initialBeach = <div>{beachData.spot.name}</div>;
+    displayData = (
+      <div>
+        <h1>{beachList.spot.name}</h1>
+        <h3>
+          Wave Range: {beachList.forecast.waveHeight.min} to{" "}
+          {beachList.forecast.waveHeight.max} ft.
+        </h3>
+        <h4>{beachList.forecast.waveHeight.humanRelation}</h4>
+        <h3>Conditions: {beachList.forecast.conditions.value}</h3>
+        <h3>Conditions: {beachList.report.body}</h3>
+      </div>
+    );
   }
 
-  return <div>{initialBeach}</div>;
+  return (
+    <div>
+      {displayData}
+      {displayBeachList}
+    </div>
+  );
 }
+
 export default Home;
