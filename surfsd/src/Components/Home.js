@@ -4,25 +4,30 @@ import { Link } from "react-router-dom";
 // import axios from "axios";
 import { useParams } from "react-router-dom";
 import spotIDs from "../spotID-data";
+// import Spot from "./Spot";
 
-function Home(props) {
+function Home() {
   //A variable for the spot ID, each beach has a unique spot ID
   //const { spot } = useParams();
   //Base URL
   const beachFinder = `https://services.surfline.com/kbyg/spots/reports?spotId=`;
+
   const [beachList, setBeachList] = useState([]);
   const [beachData, setBeachData] = useState("");
 
-  //Set initialBeach to null to avoid loading a URL without a spot ID on initial launch
-  let displayData = null;
+  let arr = []
+
   //Gather data from the URL
   const findBeach = async () => {
     var arrayLength = spotIDs.length;
     for (var i = 0; i < arrayLength; i++) {
-      fetch(beachFinder + spotIDs[i])
+      let searchURL = beachFinder + spotIDs[i];
+      //   console.log(searchURL);
+      fetch(searchURL)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          console.log(data.spot.name);
+          arr.push(data.spot.name)
           setBeachList(data);
           setBeachData(data);
         });
@@ -30,14 +35,21 @@ function Home(props) {
   };
   useEffect(() => {
     findBeach();
-  }, []);
+  }, [beachFinder]);
 
-    const displayBeachList = beachList.map((beach, index) => {
-      return <p key ={index}>{beach.spot.name}</p>;
-    });
+  //   const displayBeachList = beachList.map((beach, index) => {
+  //     return <p key={index}>{beach}</p>;
+  //   });
 
-    console.log(displayBeachList)
+    //   console.log(beachList)
 
+  // const handleClick = (e) => {
+  // setSpot(e);
+  // };
+
+  //Set initialBeach to null to avoid loading a URL without a spot ID on initial launch
+  let displayData = null;
+  //Display Beach Data
   if (beachData) {
     displayData = (
       <div>
@@ -56,7 +68,8 @@ function Home(props) {
   return (
     <div>
       {displayData}
-      {displayBeachList}
+      {/* {displayBeachList} */}
+      {/* <Spot beach={spot} /> */}
     </div>
   );
 }
