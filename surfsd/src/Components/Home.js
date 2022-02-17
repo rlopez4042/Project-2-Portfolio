@@ -28,7 +28,9 @@ function Home() {
           <Link to="/sc">
             <p id="hl">Sunset Cliffs</p>
           </Link>
-          
+          <Link to="/wb">
+            <p id="hl">Windansea</p>
+          </Link>
         </ul>
     </div>
   )

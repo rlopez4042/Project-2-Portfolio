@@ -8,7 +8,7 @@ function WB() {
   const [beachData, setBeachData] = useState("");
 
   const findBeach = async () => {
-    fetch(beachFinder + spotIDs[4])
+    fetch(beachFinder + spotIDs[7])
       .then((res) => res.json())
       .then((data) => {
         setBeachData(data);
@@ -39,7 +39,7 @@ function WB() {
         </section>
 
         {/* Current conditions, these update throughout the day */}
-        <section className = "currently">
+        <section>
         {/* Currently title */}
         <h1 id = "currently" >Current Conditions</h1>
         <section id = "conditions" >

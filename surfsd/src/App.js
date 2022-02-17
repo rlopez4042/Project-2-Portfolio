@@ -11,29 +11,35 @@ import LJ from "./Components/LJ";
 import BB from "./Components/BB";
 import SC from "./Components/SC";
 import WB from "./Components/WB";
+import AboutMe from "./Components/AboutMe";
 
 function App() {
+
+//This night time / day time theme only works on start up
+//if the code is altered, the page refreshes and the 
+//ids get confusing and it wont render anything
+
   let displayData = null;
-  let dayOfTime = null;
-
+  //Create a new variable for the Date
   var newDate = new Date();
-
+  //Use getHours() to get the Hour of the day
   var time = newDate.getHours();
-  console.log(newDate);
-  console.log(time);
+  //Preset the body for day time on start up
+  document.getElementById('body').id="body1";
+  //If statement for if the hour from new date is greater than 7pm and less than 6am, its night time
   if (time > 19 || time < 6) {
-    displayData = "Late one tonight";
-    dayOfTime = "night";
-  } else if (time > 16 && time < 19) {
-    displayData = "Catch the Sunset";
-    dayOfTime = "sunset";
+    document.getElementById('body1').id="body2";
+    //Once day hits at 6am, day time theme starts again.
   } else {
-    displayData = "A good day to have a good day";
-    dayOfTime = "day";
+    document.getElementById('body1').id="body1";
   }
 
   return (
     <div className="homepage">
+      <Link to="/aboutme">
+        <button className="button">About Me</button>
+      </Link>
+
       <h1 id="SDMobile">
         <Link id="homeButton" to="/">
           SD
@@ -58,6 +64,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/pb" element={<PB />} />
           <Route path="/ob" element={<OB />} />
           <Route path="/mb" element={<MB />} />

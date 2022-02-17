@@ -34,7 +34,7 @@ function LJ() {
             <p><span id = "color">02.</span> local vibe: {beachData.spot.travelDetails.localVibe.description}</p>
             <p><span id = "color">03.</span> shoulder burn: {beachData.spot.travelDetails.shoulderBurn.description}</p>
             <p><span id = "color">04.</span> spot rating: {beachData.spot.travelDetails.spotRating.description}</p>
-            <p><span id = "color">05.</span> water uality: {beachData.spot.travelDetails.waterQuality.description}</p>
+            <p><span id = "color">05.</span> water quality: {beachData.spot.travelDetails.waterQuality.description}</p>
           </section>
         </section>
 
