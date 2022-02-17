@@ -11,9 +11,10 @@ import MB from "./MB"
 
 function Home() {
 
-
-
-  return <div>The best beaches in SD<PB /></div>;
+  return (
+    <div>
+    </div>
+  );
 }
 
 export default Home;

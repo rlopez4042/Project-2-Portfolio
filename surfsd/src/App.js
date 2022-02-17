@@ -1,4 +1,5 @@
 import "./App.css";
+import "./App.scss";
 import React, { useState } from "react";
 import { Route, Link, Routes, Navigate } from "react-router-dom";
 import Home from "./Components/Home";
@@ -14,28 +15,33 @@ function App() {
   return (
     
     <div className = "homepage">
+      <h1 id="SDMobile">SD</h1>
+      <h1 id="SD">San Diego Surf Report</h1>
+          <h4 id="tagline">Updated surf reports for the best beaches in San Diego. Take your pick and get after it</h4>
+
       <nav>
         <ul className = "navbar">
           <Link to="/">
-            <h1>Home</h1>
+            <p>Home</p>
           </Link>
           <Link to="/pb">
-            <h1>PB</h1>
+            <p>Pacific Beach</p>
           </Link>
           <Link to="/ob">
-            <h1>OB</h1>
+            <p>Ocean Beach</p>
           </Link>
           <Link to="/mb">
-            <h1>MB</h1>
+            <p>Mission Beach</p>
           </Link>
           <Link to="/cb">
-            <h1>CB</h1>
+            <p>Cornado Beach</p>
           </Link>
           <Link to="/lj">
-            <h1>LJ</h1>
+            <p>La Jolla</p>
           </Link>
         </ul>
       </nav>
+
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
