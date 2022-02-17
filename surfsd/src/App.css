@@ -7,44 +7,50 @@
 }
 
 body {
-  font-family: 'Exo';
-  margin: 0;max-height: 100vh; 
-  padding: 9em 0 0 0;
   background-image: url('/Users/robertlopez/sei/unit2/project2/project-2-portfolio/project-2-portfolio/surfsd/src/0bc0e1889fcc16e848d65d0060b83001.jpg')
-
-  /* background: linear-gradient(110deg, #18181a 48.6%, #1c285a 48.6%);  */
 }
 
-ul {
-  display: flex;
-  padding-left: 1em;
-  font-size: 16px;
-  align-content: center;
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
- 
-  position:relative;
+.content {
+  font-family: 'Exo';
+  color: #eee;
+  text-align: center;  
+  background-image: linear-gradient(180deg, #2d55aa, rgb(24, 26, 34));
+  background-color: #2d55aa;
+  text-align: center;
+  min-height: 75vh;
+  margin: -.1em 0 0 0;
+  padding: 1em;
 }
-#SD, #homeButton {
+.content h1 {
+  margin-top:-1.8em;
+  font-weight: 100;
+  font-size: 5em;
+  user-select:none;
+  cursor: default;
+}
+#SD, #homeButton, #SDTablet{
   font-weight: 900;
   transform: skew(-15deg);
   font-size: 1em;
+  padding-left: 0em;
+  padding-right: 0em;
+}
+#SDMobile {
+  transform: skew(-15deg);
+  margin-top:-1em;
 }
 
 .homeNav{
-  display:block;
-  font-size: 10px;
-  align-content: center;
+  display:flex;
+  flex-direction: column;
   margin: 0px;
-  justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  line-height: 2.5em;
 }
 
 #hl{
+  /* font-weight: 900; */
   padding-top:0em;
   margin-top:0em;
   margin-bottom:0em
@@ -55,14 +61,16 @@ section {
   line-height: 1;
   text-align: left;
 }
+
 #mainTitle {
   font-weight: 900;
   text-align: center;
   color: rgb(109, 250, 116);
   font-size: 50px;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
 }
+
 #description {
   text-align:center;
   color: rgb(255, 255, 255);
@@ -71,6 +79,7 @@ section {
   padding: 0;
   line-height: 26pt;
 }
+
 #specifcs {  
   color: orange;
   font-size: 24px;
@@ -78,36 +87,42 @@ section {
   padding: 0;
   line-height: 26pt;
 }
+/* This is just to change the color of the numbers in front
+of each sepcific tab */
+#color{ 
+  color:white;
+}
+
 #currently {
   font-size: 40px;
   font-weight: 900;
   text-align:center;
   color: rgb(255, 254, 251);
   margin: 0.1;
-  padding: 0;
+  padding-top: 1em;
 }
+
 #conditions {
   color: orange;
   font-size: 24px;
   margin: 2em;
   padding: 0;
   line-height: 26pt;
+  text-align:center;
+  border: 6px solid;
+  border-color:burlywood;
 }
-#homeButton{
-  padding-left: 0em;
-  padding-right: 0em;
+/* Changing the color of the API input */
+#color2{
+  color: rgb(109, 250, 116);
 }
+
 #tagline{
   color: orange;
   font-size: 18px;
   font-weight:400px;
 }
-#color{
-  color:white;
-}
-#color2{
-  color: rgb(109, 250, 116);
-}
+
 a {
   text-decoration: none;
   color: white;
@@ -121,34 +136,43 @@ a:visited {
 a:hover {
   color: orange;
 }
-#SDMobile {
-  transform: skew(-15deg);
-  margin-top:-1em;
-}
+
+/* Formating for the different sized logos for different size screens */
+
 /* --------------------------------------------------------------------MOBILE --------------------------------------------------------------------*/
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (max-width: 576px) {
   body {
-    background-color: #323232;
     margin: 0;max-height: 100vh; 
-    padding: 4em 0 0 0;
+    padding: 8em 0 0 0;
   }
+
   #description, #summary, #conditions, #specifcs{
     font-size:20px;
   }
-  #SD, #tagline, .navbar{
+  #SD, #SDTablet, #tagline {
     display: none;
   }
-  .container {
+  .container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr;
     grid-gap: 10px;;
   }
+  .container .homeNavDiv {
+    padding-top: 16px;
+    grid-column: 1fr;
+    grid-row: 1fr;
+  }
   .container .summary {
     padding-top: 16px;
     grid-column: 1fr;
     grid-row: 1fr;
+  }
+  .container .section {
+    padding-top: 16px;
+    grid-column: 1fr;
+    grid-row: 1fr/2fr;
   }
   .homepage .currently {
     grid-column: 1fr;
@@ -158,16 +182,13 @@ a:hover {
 /* --------------------------------------------------------------------TABLET-------------------------------------------------------------------- */
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 577px) {
-
   body {
-    padding: 8em 0 0 0;
+    padding: 10em 0 0 0;
   }
-
-  #SD{
-    font-size: 3em;
+  #SDTablet{
+    font-size: 5em;
   }
-
-  #SDMobile {
+  #SDMobile, #SD {
     display:none
   }
   .container {
@@ -194,12 +215,13 @@ a:hover {
   /* Large devices (tablets, 1024 and up) */
   @media screen and (min-width: 769px) {
     body {
-      padding: 10em 0 0 0;
+      padding: 12em 0 0 0;
     }
     #SD{
+      display:block;
       font-size: 5em;
     }
-    #SDMobile {
+    #SDMobile, #SDTablet {
       display:none
     }
     .container {

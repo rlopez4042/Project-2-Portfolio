@@ -17,11 +17,11 @@ function LJ() {
   useEffect(() => {
     findBeach();
   }, []);
-
+  // console.log(source)
   let displayData = null;
   if (beachData) {
     displayData = (
-      
+
       <div className = "container">
 
         {/* A summary of the beach, fun factor/other stuff like that */}
@@ -38,16 +38,23 @@ function LJ() {
           </section>
         </section>
 
+        <source src={beachData.spot.cameras.title} type="video/mp4"/>
+
+
         {/* Current conditions, these update throughout the day */}
         <section className = "currently">
         {/* Currently title */}
         <h1 id = "currently" >Current Conditions</h1>
         <section id = "conditions" >
-            <p>Conditions: <span id ="color2">{beachData.forecast.conditions.value}</span></p>
-            <p>Wave Range: <span id ="color2">{beachData.forecast.waveHeight.min} to{" "}{beachData.forecast.waveHeight.max} ft. - {beachData.forecast.waveHeight.humanRelation}</span></p>
+        <p>Conditions: <span id ="color2">{beachData.forecast.conditions.value}</span></p>
+            <p>Wave Range: <span id ="color2">{beachData.forecast.waveHeight.min} to{" "}{beachData.forecast.waveHeight.max} ft. - {beachData.forecast.waveHeight.humanRelation}.</span></p>
+            <p>Wind: <span id ="color2">{beachData.forecast.wind.speed} mph, direction is {" "}{beachData.forecast.wind.directionType}.</span></p>
             <p>Tide: <span id ="color2">{beachData.forecast.tide.current.type}</span></p>
             <p>Water temp between <span id ="color2">{beachData.forecast.waterTemp.min} and {beachData.forecast.waterTemp.max}</span></p>
             <p>Air Temp: <span id ="color2">{beachData.forecast.weather.temperature} F</span></p>
+            {/* <video width="750" height="500" controls >
+              <source src="https://camrewinds.cdn-surfline.com/live/wc-lajollashores.stream.20220216T180013155.mp4"  type="video/mp4"/>
+            </video> */}
             </section>
         </section>
         

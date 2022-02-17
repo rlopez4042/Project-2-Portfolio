@@ -1,14 +1,10 @@
-import { render } from "@testing-library/react";
-import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
-// import axios from "axios";
-import { useParams } from "react-router-dom";
-import spotIDs from "../spotID-data";
-// import Spot from "./Spot";
 
 function Home() {
-  return (
-    <div>
+
+  let homePageMenu = (
+    <div className="container">
       <ul className = "homeNav">
 
           <Link to="/pb">
@@ -35,7 +31,9 @@ function Home() {
           
         </ul>
     </div>
-  );
+  )
+  return <div>{homePageMenu}</div>
+  
 }
 
 export default Home;

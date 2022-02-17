@@ -8,34 +8,53 @@ import OB from "./Components/OB";
 import MB from "./Components/MB";
 import CB from "./Components/CB";
 import LJ from "./Components/LJ";
-
-
 import BB from "./Components/BB";
-
 import SC from "./Components/SC";
-
 import WB from "./Components/WB";
 
 function App() {
+  let displayData = null;
+  let dayOfTime = null;
 
   var newDate = new Date();
-      var time = newDate.getHours();
-      console.log(newDate)
-      console.log(time)
-      // if (time > 19 || time < 6)
-      //   ("#inde").css("background", "url('night.jpg')");
-      // else if (time > 16 && time < 19)
-      //   ("#header").css("background", "url('sunset.jpg')");
-      // else
-      //   ("#header").css("background", "url('day.jpg')");
 
+  var time = newDate.getHours();
+  console.log(newDate);
+  console.log(time);
+  if (time > 19 || time < 6) {
+    displayData = "Late one tonight";
+    dayOfTime = "night";
+  } else if (time > 16 && time < 19) {
+    displayData = "Catch the Sunset";
+    dayOfTime = "sunset";
+  } else {
+    displayData = "A good day to have a good day";
+    dayOfTime = "day";
+  }
 
   return (
-    
-    <div className = "homepage">
-      <h1 id="SDMobile"><Link id="homeButton" to="/">SD</Link></h1>
-      <h1 id="SD">San Diego <Link id="homeButton" to="/">Surf</Link> Report</h1>
-          <h4 id="tagline">Updated surf reports for the best beaches in San Diego. Take your pick and get after it</h4>
+    <div className="homepage">
+      <h1 id="SDMobile">
+        <Link id="homeButton" to="/">
+          SD
+        </Link>
+      </h1>
+
+      <h1 id="SDTablet">
+        Surfs{" "}
+        <Link id="homeButton" to="/">
+          Up
+        </Link>
+      </h1>
+
+      <h1 id="SD">
+        San Diego{" "}
+        <Link id="homeButton" to="/">
+          Surf
+        </Link>{" "}
+        Report
+      </h1>
+      <h4 id="tagline">{displayData}</h4>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

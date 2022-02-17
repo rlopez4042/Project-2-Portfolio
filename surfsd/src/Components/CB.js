@@ -43,10 +43,14 @@ function CB() {
         {/* Currently title */}
         <h1 id = "currently" >Current Conditions</h1>
         <section id = "conditions" >
-            <p>Wave Range: <span id ="color2">{beachData.forecast.waveHeight.min} to{" "}{beachData.forecast.waveHeight.max} ft. - {beachData.forecast.waveHeight.humanRelation}</span></p>
+            <p>Wave Range: <span id ="color2">{beachData.forecast.waveHeight.min} to{" "}{beachData.forecast.waveHeight.max} ft. - {beachData.forecast.waveHeight.humanRelation}.</span></p>
+            <p>Wind: <span id ="color2">{beachData.forecast.wind.speed} mph, direction is {" "}{beachData.forecast.wind.directionType}.</span></p>
             <p>Tide: <span id ="color2">{beachData.forecast.tide.current.type}</span></p>
             <p>Water temp between <span id ="color2">{beachData.forecast.waterTemp.min} and {beachData.forecast.waterTemp.max}</span></p>
             <p>Air Temp: <span id ="color2">{beachData.forecast.weather.temperature} F</span></p>
+            {/* <video width="750" height="500" controls >
+              <source src="https://camrewinds.cdn-surfline.com/live/wc-lajollashores.stream.20220216T180013155.mp4"  type="video/mp4"/>
+            </video> */}
             </section>
         </section>
         
@@ -56,7 +60,6 @@ function CB() {
   return (
     <div>
       {displayData}
-      {/* <h1>{test}</h1> */}
     </div>
   );
 }

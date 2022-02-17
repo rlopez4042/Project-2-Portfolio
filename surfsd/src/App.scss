@@ -1,4 +1,10 @@
-// https://codepen.io/andyfitz/pen/aZrKdV
+// This App.scss component was used to create the wave effect for my background
+// I disected it and changed the background/water color to make it fit what I wanted
+// I also moved some of the styling components into my App.css and manipulated them there
+// becase thats what I was used to and most comfortable with.
+
+//The link for the design is here : https://codepen.io/andyfitz/pen/aZrKdV
+
 
 ::selection{background-color: salmon; color: white;}
 .parallax > use{
@@ -16,34 +22,9 @@
 .editorial {
   display: block;
   width: 100%;
-  height: 10em;
+  height: 14em;
   max-height: 100vh;
   margin: 0;
-}
-
-.content {
-  text-align: center;  
-  background-image: linear-gradient(180deg, #2d55aa, rgb(24, 26, 34));
-  // background-color: #2d55aa;
-  text-align: center;
-  min-height: 75vh;
-  margin: -.1em 0 0 0;
-  padding: 1em;
-  color: #eee;
-  font-size: 2em;
-  font-weight: 300;
-}
-.content{font-size: 1em;}
-
-#container {
-    text-align: center;
-}
-.content h1 {
-  margin-top:-1.3em;
-  font-weight: 100;
-  font-size: 5em;
-  user-select:none;
-  cursor: default;
 }
 
 /*prevent many large-by-comparison ripples by shrinking the height*/
@@ -51,5 +32,3 @@
   .content h1{font-size: 12vmax}
   .editorial{height:17vw;}
 }
-
-h1{outline:none}
