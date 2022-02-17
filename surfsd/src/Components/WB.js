@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import spotIDs from "../spotID-data";
 
-function MB() {
+function WB() {
   //Base URL
   const beachFinder = `https://services.surfline.com/kbyg/spots/reports?spotId=`;
 
   const [beachData, setBeachData] = useState("");
 
   const findBeach = async () => {
-    fetch(beachFinder + spotIDs[2])
+    fetch(beachFinder + spotIDs[4])
       .then((res) => res.json())
       .then((data) => {
         setBeachData(data);
@@ -61,4 +61,4 @@ function MB() {
     </div>
   );
 }
-export default MB;
+export default WB;

@@ -1,9 +1,11 @@
+// https://codepen.io/andyfitz/pen/aZrKdV
+
 ::selection{background-color: salmon; color: white;}
 .parallax > use{
   animation:move-forever 12s linear infinite;
   &:nth-child(1){animation-delay:-2s;}
-  &:nth-child(2){animation-delay:-2s; animation-duration:5s}
-  &:nth-child(3){animation-delay:-4s; animation-duration:3s}
+  &:nth-child(2){animation-delay:-2s; animation-duration:6s}
+  &:nth-child(3){animation-delay:-4s; animation-duration:4s}
 }
 
 @keyframes move-forever{
@@ -20,9 +22,9 @@
 }
 
 .content {
-
-font-family: 'Lato',sans-serif;  
-  text-align: center;  background-color: #2d55aa;
+  text-align: center;  
+  background-image: linear-gradient(180deg, #2d55aa, rgb(24, 26, 34));
+  // background-color: #2d55aa;
   text-align: center;
   min-height: 75vh;
   margin: -.1em 0 0 0;
@@ -51,5 +53,3 @@ font-family: 'Lato',sans-serif;
 }
 
 h1{outline:none}
-
-body{background-color:#234}

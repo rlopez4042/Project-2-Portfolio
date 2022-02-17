@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Inter:wght@500&family=Roboto+Mono&family=Ropa+Sans&display=swap');
+
 * {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  background-color: #323232;
+  font-family: 'Exo';
   margin: 0;max-height: 100vh; 
   padding: 9em 0 0 0;
-  background: linear-gradient(110deg, #18181a 48.6%, #1c285a 48.6%); 
+  background-image: url('/Users/robertlopez/sei/unit2/project2/project-2-portfolio/project-2-portfolio/surfsd/src/0bc0e1889fcc16e848d65d0060b83001.jpg')
+
+  /* background: linear-gradient(110deg, #18181a 48.6%, #1c285a 48.6%);  */
 }
 
 ul {
@@ -17,48 +21,93 @@ ul {
   font-size: 16px;
   align-content: center;
   margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+ 
+  position:relative;
 }
-.navbar{
+#SD, #homeButton {
+  font-weight: 900;
+  transform: skew(-15deg);
+  font-size: 1em;
+}
+
+.homeNav{
+  display:block;
+  font-size: 10px;
   align-content: center;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
 }
+
+#hl{
+  padding-top:0em;
+  margin-top:0em;
+  margin-bottom:0em
+}
+
 section {
   padding: 1em;
   line-height: 1;
   text-align: left;
 }
 #mainTitle {
+  font-weight: 900;
   text-align: center;
-  color: rgb(109, 109, 250);
-  font-family: "Inter", sans-serif;
+  color: rgb(109, 250, 116);
   font-size: 50px;
   margin: 0;
   padding: 0;
 }
 #description {
-  color: orange;
-  font-size: 18px;
-  margin: 0.1;
+  text-align:center;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  margin: 1em;
   padding: 0;
+  line-height: 26pt;
 }
-#specifcs {
+#specifcs {  
   color: orange;
-  font-size: 18px;
-  margin: 0.1;
+  font-size: 24px;
+  margin: 2em;
   padding: 0;
+  line-height: 26pt;
 }
 #currently {
+  font-size: 40px;
+  font-weight: 900;
+  text-align:center;
   color: rgb(255, 254, 251);
-  font-size: 28px;
   margin: 0.1;
   padding: 0;
 }
 #conditions {
   color: orange;
-  font-size: 18px;
-  margin: 0.1;
+  font-size: 24px;
+  margin: 2em;
   padding: 0;
+  line-height: 26pt;
 }
-
+#homeButton{
+  padding-left: 0em;
+  padding-right: 0em;
+}
+#tagline{
+  color: orange;
+  font-size: 18px;
+  font-weight:400px;
+}
+#color{
+  color:white;
+}
+#color2{
+  color: rgb(109, 250, 116);
+}
 a {
   text-decoration: none;
   color: white;
@@ -73,11 +122,8 @@ a:hover {
   color: orange;
 }
 #SDMobile {
+  transform: skew(-15deg);
   margin-top:-1em;
-  font-weight: 100;
-  font-size: 5em;
-  user-select:none;
-  cursor: default;
 }
 /* --------------------------------------------------------------------MOBILE --------------------------------------------------------------------*/
 /* Small devices (landscape phones, 576px and up) */
@@ -86,6 +132,9 @@ a:hover {
     background-color: #323232;
     margin: 0;max-height: 100vh; 
     padding: 4em 0 0 0;
+  }
+  #description, #summary, #conditions, #specifcs{
+    font-size:20px;
   }
   #SD, #tagline, .navbar{
     display: none;
@@ -112,6 +161,10 @@ a:hover {
 
   body {
     padding: 8em 0 0 0;
+  }
+
+  #SD{
+    font-size: 3em;
   }
 
   #SDMobile {
@@ -143,6 +196,9 @@ a:hover {
     body {
       padding: 10em 0 0 0;
     }
+    #SD{
+      font-size: 5em;
+    }
     #SDMobile {
       display:none
     }
@@ -156,14 +212,14 @@ a:hover {
       padding-top: 16px;
       grid-column: 1fr;
       grid-row: 1fr;
-      padding-left:6em;
-      padding-right:6em;
+      padding-left:8em;
+      padding-right:8em;
     }
     .homepage .currently {
       grid-column: 1fr;
       grid-row: 2fr;
-      padding-left:6em;
-      padding-right:6em;
+      padding-left:8em;
+      padding-right:8em;
     }
   }
   

@@ -5,14 +5,35 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import spotIDs from "../spotID-data";
 // import Spot from "./Spot";
-import PB from "./PB"
-import OB from "./OB"
-import MB from "./MB"
 
 function Home() {
-
   return (
     <div>
+      <ul className = "homeNav">
+
+          <Link to="/pb">
+            <p id="hl">Pacific Beach</p>
+          </Link>
+          <Link to="/ob">
+            <p id="hl">Ocean Beach</p>
+          </Link>
+          <Link to="/mb">
+            <p id="hl">Mission Beach</p>
+          </Link>
+          <Link to="/cb">
+            <p id="hl">Cornado Beach</p>
+          </Link>
+          <Link to="/lj">
+            <p id="hl">La Jolla</p>
+          </Link>
+          <Link to="/bb">
+            <p id="hl">Blacks</p>
+          </Link>
+          <Link to="/sc">
+            <p id="hl">Sunset Cliffs</p>
+          </Link>
+          
+        </ul>
     </div>
   );
 }

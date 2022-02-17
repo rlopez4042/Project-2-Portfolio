@@ -33,24 +33,24 @@ function PB() {
         <h1 id = "mainTitle" >{beachData.spot.name}</h1>
         <p id = "description" >{beachData.spot.travelDetails.description}</p>
           <section id = "specifcs" >
-            <p>01. crowd factor: {beachData.spot.travelDetails.crowdFactor.description}</p>
-            <p>02. local vibe: {beachData.spot.travelDetails.localVibe.description}</p>
-            <p>03. shoulder burn: {beachData.spot.travelDetails.shoulderBurn.description}</p>
-            <p>04. spot rating: {beachData.spot.travelDetails.spotRating.description}</p>
-            <p>05. water uality: {beachData.spot.travelDetails.waterQuality.description}</p>
+            <p><span id = "color">01.</span> crowd factor: {beachData.spot.travelDetails.crowdFactor.description}</p>
+            <p><span id = "color">02.</span> local vibe: {beachData.spot.travelDetails.localVibe.description}</p>
+            <p><span id = "color">03.</span> shoulder burn: {beachData.spot.travelDetails.shoulderBurn.description}</p>
+            <p><span id = "color">04.</span> spot rating: {beachData.spot.travelDetails.spotRating.description}</p>
+            <p><span id = "color">05.</span> water uality: {beachData.spot.travelDetails.waterQuality.description}</p>
           </section>
         </section>
 
         {/* Current conditions, these update throughout the day */}
         <section className = "currently">
         {/* Currently title */}
-        <h1 id = "currently" >Currently:</h1>
+        <h1 id = "currently" >Current Conditions</h1>
         <section id = "conditions" >
-            <p>Conditions: {beachData.forecast.conditions.value}</p>
-            <p>Wave Range: {beachData.forecast.waveHeight.min} to{" "}{beachData.forecast.waveHeight.max} ft. - {beachData.forecast.waveHeight.humanRelation}</p>
-            <p> Tide: {beachData.forecast.tide.current.type}</p>
-            <p> Water temp between {beachData.forecast.waterTemp.min} and {beachData.forecast.waterTemp.max}</p>
-            <p> Air Temp: {beachData.forecast.weather.temperature} F</p>
+            <p>Conditions: <span id ="color2">{beachData.forecast.conditions.value}</span></p>
+            <p>Wave Range: <span id ="color2">{beachData.forecast.waveHeight.min} to{" "}{beachData.forecast.waveHeight.max} ft. - {beachData.forecast.waveHeight.humanRelation}</span></p>
+            <p>Tide: <span id ="color2">{beachData.forecast.tide.current.type}</span></p>
+            <p>Water temp between <span id ="color2">{beachData.forecast.waterTemp.min} and {beachData.forecast.waterTemp.max}</span></p>
+            <p>Air Temp: <span id ="color2">{beachData.forecast.weather.temperature} F</span></p>
             </section>
         </section>
         
