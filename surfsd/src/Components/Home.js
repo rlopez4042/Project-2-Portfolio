@@ -1,46 +1,42 @@
-
 import { Link } from "react-router-dom";
 
 function Home() {
-
   let homePageMenu = (
     <div className="container">
-      <ul className = "homeNav">
-
-          <Link to="/pb">
-            <p id="hl">Pacific Beach</p>
-          </Link>
-          <Link to="/ob">
-            <p id="hl">Ocean Beach</p>
-          </Link>
-          <Link to="/mb">
-            <p id="hl">Mission Beach</p>
-          </Link>
-          <Link to="/cb">
-            <p id="hl">Cornado Beach</p>
-          </Link>
-          <Link to="/lj">
-            <p id="hl">La Jolla</p>
-          </Link>
-          <Link to="/bb">
-            <p id="hl">Blacks</p>
-          </Link>
-          <Link to="/sc">
-            <p id="hl">Sunset Cliffs</p>
-          </Link>
-          <Link to="/wb">
-            <p id="hl">Windansea</p>
-          </Link>
-        </ul>
+      <ul className="homeNav">
+        <Link to="/pb">
+          <p id="hl">Pacific Beach</p>
+        </Link>
+        <Link to="/ob">
+          <p id="hl">Ocean Beach</p>
+        </Link>
+        <Link to="/mb">
+          <p id="hl">Mission Beach</p>
+        </Link>
+        <Link to="/cb">
+          <p id="hl">Cornado Beach</p>
+        </Link>
+        <Link to="/lj">
+          <p id="hl">La Jolla</p>
+        </Link>
+        <Link to="/bb">
+          <p id="hl">Blacks</p>
+        </Link>
+        <Link to="/sc">
+          <p id="hl">Sunset Cliffs</p>
+        </Link>
+        <Link to="/wb">
+          <p id="hl">Windansea</p>
+        </Link>
+      </ul>
     </div>
-  )
-  return <div>{homePageMenu}</div>
-  
+  );
+  return <div>{homePageMenu}</div>;
 }
 
 export default Home;
 
-// ----------------------------------------------------------------Original----------------------------------------------------------------
+// ----------------------------------------------------------------Original Idea----------------------------------------------------------------
 
 // import { render } from "@testing-library/react";
 // import { useEffect, useState } from "react";

@@ -13,12 +13,12 @@ function AboutMe() {
         University and an aspiring interdisciplinary software engineer enrolled
         at General Assembly.
       </p>
-      {/* <p id="description">
+      <p id="description">
         <span id="color2">
           Feel free to tap that link below and check out a few of my other
           projects.
         </span>
-      </p> */}
+      </p>
     </div>
   );
   return <div>{AboutMe}</div>;

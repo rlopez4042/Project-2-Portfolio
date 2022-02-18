@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import spotIDs from "../spotID-data";
+import spotIDs from "../../spotID-data";
 
-function CB() {
+function OB() {
   //Base URL
   const beachFinder = `https://services.surfline.com/kbyg/spots/reports?spotId=`;
 
   const [beachData, setBeachData] = useState("");
 
   const findBeach = async () => {
-    fetch(beachFinder + spotIDs[3])
+    fetch(beachFinder + spotIDs[1])
       .then((res) => res.json())
       .then((data) => {
         setBeachData(data);
@@ -43,6 +43,7 @@ function CB() {
         {/* Currently title */}
         <h1 id = "currently" >Current Conditions</h1>
         <section id = "conditions" >
+        <p>Conditions: <span id ="color2">{beachData.forecast.conditions.value}</span></p>
             <p>Wave Range: <span id ="color2">{beachData.forecast.waveHeight.min} to{" "}{beachData.forecast.waveHeight.max} ft. - {beachData.forecast.waveHeight.humanRelation}.</span></p>
             <p>Wind: <span id ="color2">{beachData.forecast.wind.speed} mph, direction is {" "}{beachData.forecast.wind.directionType}.</span></p>
             <p>Tide: <span id ="color2">{beachData.forecast.tide.current.type}</span></p>
@@ -60,7 +61,8 @@ function CB() {
   return (
     <div>
       {displayData}
+      {/* <h1>{test}</h1> */}
     </div>
   );
 }
-export default CB;
+export default OB;

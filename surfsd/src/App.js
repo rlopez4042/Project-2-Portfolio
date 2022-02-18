@@ -3,35 +3,42 @@ import "./App.scss";
 import React, { useState } from "react";
 import { Route, Link, Routes, Navigate } from "react-router-dom";
 import Home from "./Components/Home";
-import PB from "./Components/PB";
-import OB from "./Components/OB";
-import MB from "./Components/MB";
-import CB from "./Components/CB";
-import LJ from "./Components/LJ";
-import BB from "./Components/BB";
-import SC from "./Components/SC";
-import WB from "./Components/WB";
+import PB from "./Components/BeachComponents/PB";
+import OB from "./Components/BeachComponents/OB";
+import MB from "./Components/BeachComponents/MB";
+import CB from "./Components/BeachComponents/CB";
+import LJ from "./Components/BeachComponents/LJ";
+import BB from "./Components/BeachComponents/BB";
+import SC from "./Components/BeachComponents/SC";
+import WB from "./Components/BeachComponents/WB";
 import AboutMe from "./Components/AboutMe";
+import tags from "./randomQuotes";
 
 function App() {
-
-//This night time / day time theme only works on start up
-//if the code is altered, the page refreshes and the 
-//ids get confusing and it wont render anything
-
+  //This night time / day time theme only works on start up
+  //if the code is altered, the page refreshes and the
+  //ids get confusing and it wont render anything
   let displayData = null;
+  var items = tags;
+  var item = items[Math.floor(Math.random() * items.length)];
+  displayData = item;
+
+  // let displayData = null;
   //Create a new variable for the Date
   var newDate = new Date();
   //Use getHours() to get the Hour of the day
   var time = newDate.getHours();
+  console.log(time);
   //Preset the body for day time on start up
-  document.getElementById('body').id="body1";
+  document.getElementById("body").id = "body1";
   //If statement for if the hour from new date is greater than 7pm and less than 6am, its night time
-  if (time > 19 || time < 6) {
-    document.getElementById('body1').id="body2";
+  if (time > 17.5 || time < 6) {
+    document.getElementById("body1").id = "body2";
+    displayData = item;
     //Once day hits at 6am, day time theme starts again.
   } else {
-    document.getElementById('body1').id="body1";
+    document.getElementById("body1").id = "body1";
+    // displayData=("")
   }
 
   return (

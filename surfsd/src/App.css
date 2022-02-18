@@ -5,13 +5,13 @@
 * {
   scroll-behavior: smooth;
 }
-
+/* Dat time theme for page */
 #body1 {
-  background-image: url("/Users/robertlopez/sei/unit2/project2/project-2-portfolio/project-2-portfolio/surfsd/src/0bc0e1889fcc16e848d65d0060b83001.jpg");
+  background-image: url("/Users/robertlopez/sei/unit2/project2/project-2-portfolio/project-2-portfolio/surfsd/src/ProjectImages/0bc0e1889fcc16e848d65d0060b83001.jpg");
 }
-
+/* Night time theme for page */
 #body2 {
-  background-color: pink;
+  background-image: url("/Users/robertlopez/sei/unit2/project2/project-2-portfolio/project-2-portfolio/surfsd/src/ProjectImages/sub-buzz-1536-1599797601-11.jpg");
 }
 
 /* Below is some code for a button design, 
@@ -71,8 +71,9 @@ button:focus::before {
 }
 
 button::after {
-  content: '';
-  width: 30px; height: 30px;
+  content: "";
+  width: 30px;
+  height: 30px;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -80,7 +81,8 @@ button::after {
   transform: translate(-50%, -50%);
 }
 
-button:hover::after, button:focus::after {
+button:hover::after,
+button:focus::after {
   animation: none;
   display: none;
 }
@@ -90,7 +92,7 @@ button:hover::after, button:focus::after {
   color: #eee;
   text-align: center;
   background-image: linear-gradient(180deg, #2d55aa, rgb(24, 26, 34));
-  background-color: #2d55aa;
+  /* background-color: #2d55aa; */
   text-align: center;
   min-height: 75vh;
   margin: -0.1em 0 0 0;
