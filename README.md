@@ -72,19 +72,26 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 6hrs| 0hrs |  |
-| Working with API | H | 4hrs| 0hrs |  |
-| Formating all components | M | 0hrs| 2.5hrs |  |
-| Total | H | 16hrs| 0hrs |  |
+| Working with API | H | 4hrs| 0hrs | 8hrs |
+| Formating all components | M | 0hrs| 2.5hrs | 4hrs |
+| Total | H | 16hrs| 0hrs | 12hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+The code snippet below was designed to change the theme of my page. 
+I used the Date() method to get the updated hour and then used an "if statement"
+to change the background when the hour was at night/day
+ 
+  var newDate = new Date();
+  var time = newDate.getHours();
+  console.log(time);
+  document.getElementById("body").id = "body1";
+  if (time > 17.5 || time < 6) {
+    document.getElementById("body1").id = "body2";
+    displayData = item;
+  } else {
+    document.getElementById("body1").id = "body1";
+  }
