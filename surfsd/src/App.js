@@ -15,13 +15,17 @@ import AboutMe from "./Components/AboutMe";
 import tags from "./randomQuotes";
 
 function App() {
-  //This night time / day time theme only works on start up
-  //if the code is altered, the page refreshes and the
-  //ids get confusing and it wont render anything
+
   let displayData = null;
   var items = tags;
   var item = items[Math.floor(Math.random() * items.length)];
   displayData = item;
+
+  // ----------------------------------------------------------------Code Snippet----------------------------------------------------------------
+  
+    //This night time / day time theme only works on start up
+  //if the code is altered, the page refreshes and the
+  //ids get confusing and it wont render anything
 
   // let displayData = null;
   //Create a new variable for the Date
@@ -40,6 +44,9 @@ function App() {
     document.getElementById("body1").id = "body1";
     // displayData=("")
   }
+
+  // ----------------------------------------------------------------Code Snippet----------------------------------------------------------------
+
 
   return (
     <div className="homepage">
