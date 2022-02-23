@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Links
 
-## Available Scripts
+- [https://git.generalassemb.ly/rlopez4042/project-2-react]()
+- [add your deployment link]()
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+The goal of this project is to display current surf conditions at different beaches in San Diego. The site will display conditions and suit/board recomendations. The user can also add specific breaks to a favorites tab.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
 
-### `npm test`
+https://services.surfline.com/search/site?q=lajolla access to the La Jolla spot ID
+https://services.surfline.com/kbyg/spots/reports?spotId={specific spot ID}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+"wind": {
+"speed": 5,
+"direction": 270.88541,
+"directionType": "Onshore"
+},
+"waveHeight": {
+"human": true,
+"min": 3,
+"max": 5,
+"occasional": null,
+"humanRelation": "Waist to head high",
+"plus": false
+},
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Wireframes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- https://wireframepro.mockflow.com/editor.jsp?editor=off&perm=Owner&projectid=M0BbJoF0pnb&publicid=13d9276bcbf34d8d856235bf81df8ade#/page/D9e0950a16ff51d85c20a9b814ebf04e3
+- [add link to your react architecture]()
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### MVP/PostMVP - 5min
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### MVP
+- Find and use external api 
+- Render data on page 
+- Allow user to interact with the page
+- Allow user to select and add beaches to a favorites tab
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### PostMVP EXAMPLE
 
-## Learn More
+- Include java animations
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Components
+##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-### Code Splitting
+| Component | Description | 
+| --- | :---: |  
+| App | This will make the initial data pull and include React Router| 
+| Home | This will render the header include the nav, it will also show all the available beaches in San Diego | 
+| Beach | This will render the header include the nav, it will also show info for one specific beach | 
+| Favorites | This will display only the favorited locations and give a quick description of their current conditions| 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Adding Form | H | 6hrs| 0hrs |  |
+| Working with API | H | 4hrs| 0hrs | 8hrs |
+| Formating all components | M | 0hrs| 2.5hrs | 4hrs |
+| Total | H | 16hrs| 0hrs | 12hrs |
 
-### Making a Progressive Web App
+## Additional Libraries
+ Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Code Snippet
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The code snippet below was designed to change the theme of my page. 
+I used the Date() method to get the updated hour and then used an "if statement"
+to change the background when the hour was at night/day
+ 
+  var newDate = new Date();
+  var time = newDate.getHours();
+  console.log(time);
+  document.getElementById("body").id = "body1";
+  if (time > 17.5 || time < 6) {
+    document.getElementById("body1").id = "body2";
+    displayData = item;
+  } else {
+    document.getElementById("body1").id = "body1";
+  }
