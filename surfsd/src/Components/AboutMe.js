@@ -15,8 +15,12 @@ function AboutMe() {
       </p>
       <p id="description">
         <span id="color2">
-          Feel free to tap that link below and check out a few of my other
-          projects.
+          Click 
+          <a href="https://github.com/rlopez4042" target="_blank">
+          <button className="button-3" role="button">
+          HERE{" "}
+          </button>
+        </a> to see my other projects!
         </span>
       </p>
     </div>
