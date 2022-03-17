@@ -3,7 +3,6 @@
 ## Project Links
 
 - [https://git.generalassemb.ly/rlopez4042/project-2-react]()
-- [add your deployment link]()
 
 ## Project Description
 
@@ -28,36 +27,19 @@ https://services.surfline.com/kbyg/spots/reports?spotId={specific spot ID}
 "occasional": null,
 "humanRelation": "Waist to head high",
 "plus": false
-},
-```
-
+}
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
 - https://wireframepro.mockflow.com/editor.jsp?editor=off&perm=Owner&projectid=M0BbJoF0pnb&publicid=13d9276bcbf34d8d856235bf81df8ade#/page/D9e0950a16ff51d85c20a9b814ebf04e3
-- [add link to your react architecture]()
-
-
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP
 - Find and use external api 
 - Render data on page 
 - Allow user to interact with the page
 - Allow user to select and add beaches to a favorites tab
-
-#### PostMVP EXAMPLE
-
-- Include java animations
-
-## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
 | Component | Description | 
 | --- | :---: |  
@@ -71,13 +53,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 6hrs| 0hrs |  |
-| Working with API | H | 4hrs| 0hrs | 8hrs |
-| Formating all components | M | 0hrs| 2.5hrs | 4hrs |
-| Total | H | 16hrs| 0hrs | 12hrs |
-
-## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+| Working with API | H | 4hrs| 3hrs | 8hrs |
+| Formating all components | M | 3hrs| 2.5hrs | 6hrs |
 
 ## Code Snippet
 
