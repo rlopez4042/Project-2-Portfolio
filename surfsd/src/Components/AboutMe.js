@@ -14,14 +14,6 @@ function AboutMe() {
         at General Assembly.
       </p>
       <p id="description">
-        <span id="color2">
-          Click 
-          <a href="https://github.com/rlopez4042" target="_blank">
-          <button className="button-3" role="button">
-          HERE{" "}
-          </button>
-        </a> to see my other projects!
-        </span>
       </p>
     </div>
   );
